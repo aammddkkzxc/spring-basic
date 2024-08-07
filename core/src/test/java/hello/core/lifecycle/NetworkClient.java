@@ -23,7 +23,16 @@ public class NetworkClient {
     }
 
     //서비스 종료시 호출
-    public void disconnect() {
+    public void disConnect() {
         System.out.println("close: " + url);
+    }
+
+    public void close() {
+        disConnect();
+    }
+
+    public void init() {
+        connect();
+        call("초기화 연결 메시지");
     }
 }
